@@ -37,3 +37,4 @@ typing_extensions==4.15.0
 rapidfuzz==3.14.5
 python-dotenv==1.2.2
 google-genai==2.8.0
+groq==1.4.0
