@@ -4,6 +4,28 @@ import statistics
 QUESTION_NUMBER_RE = re.compile(r"^[Qq]?(\d+)([.):]?$|[.):]\s)")
 OPTION_LABEL_RE = re.compile(r"^([A-Da-d])([.):]?$|[.):]\s)")
 
+# Matches a leading "answer"/"option"/etc. label, as long as it's followed by
+# a separator (space, punctuation) or the end of the string - so it doesn't
+# eat the start of an unrelated word.
+MCQ_PREFIX_RE = re.compile(r"^(answer|option|ans|opt)(?=[\s.:)]|$)")
+
+# Common OCR misreads between digits and the letters used for MCQ options.
+OCR_DIGIT_TO_LETTER = {
+    "0": "o",
+    "1": "i",
+    "2": "z",
+    "5": "s",
+    "6": "g",
+    "8": "b",
+}
+
+
+def normalize_mcq_answer(text: str) -> str:
+    text = text.strip().lower()
+    text = MCQ_PREFIX_RE.sub("", text)
+    text = re.sub(r"[\s.():]+", "", text)
+    return OCR_DIGIT_TO_LETTER.get(text, text)
+
 
 def group_words_into_lines(words: list[dict], tolerance_ratio: float = 0.5) -> list[list[dict]]:
     if not words:
