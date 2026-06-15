@@ -1,5 +1,6 @@
 import os
 import fitz
+import pdfplumber
 from pdf2image import convert_from_path
 from PIL.Image import Image
 
@@ -40,3 +41,25 @@ def detect_pdf_type(doc: fitz.Document, min_chars: int = 20) -> str:
 def convert_pdf_to_images(file_path: str, dpi: int = 300) -> list[Image]:
     # Assumes file_path has already passed validate_pdf() — no corruption/encryption checks here.
     return convert_from_path(file_path, dpi=dpi)
+
+
+def extract_pdf_words(
+    page: pdfplumber.page.Page,
+    max_width_fraction: float = 0.5,
+    max_height_fraction: float = 0.5,
+) -> list[dict]:
+    max_width = max_width_fraction * page.width
+    max_height = max_height_fraction * page.height
+
+    words = []
+    for w in page.extract_words(x_tolerance=1):
+        if w["width"] > max_width or w["height"] > max_height:
+            continue
+        words.append({
+            "text": w["text"],
+            "left": w["x0"],
+            "top": w["top"],
+            "width": w["width"],
+            "height": w["height"],
+        })
+    return words
