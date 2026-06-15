@@ -123,7 +123,6 @@ For handwritten PDFs, Gemini and Tesseract run in parallel and do completely dif
 
 ## Technology Decisions — Fixed
 
-Do not suggest alternatives to these unless there is a critical reason:
 
 | Layer | Decision | Reason |
 |---|---|---|
