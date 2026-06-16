@@ -1,0 +1,26 @@
+question,student_index,human_score,markly_score,error,max_score,feedback
+1ai,1,2.5,3,0.5,3,The student successfully argues against the development by identifying a key concern explicitly listed in the rubric: th
+1ai,2,3.0,3,0.0,3,The student successfully argues against the development by highlighting that even advanced machines can be bypassed frau
+1ai,3,2.5,1,1.5,3,"The student has provided a good start, mentioning the benefit of biometric authentication in tracking access to the buil"
+1ai,4,0.0,0,0.0,3,The student's answer does not address any valid reasons for or against the development regarding access to the senate bu
+1ai,5,2.5,2,0.5,3,"Student's answer identifies valid concerns with biometrics authentication, but lacks discussion on cost advantage. Some "
+1ai,6,2.5,1,1.5,3,"The student partially addresses a valid reason for this development, citing the uniqueness of fingerprints."
+1ai,7,2.0,1,1.0,3,"Partial address of valid reason, but lacks concrete examples."
+1ai,8,3.0,3,0.0,3,Partial match.
+1ai,9,1.5,0,1.5,3,The student's answer is contradictory as 'I argue for against' does not make sense. The response partially addresses the
+1ai,10,1.5,1,0.5,3,The argument 'its safer because unauthorized user can not have access into the building after working hours' is partiall
+1ai,11,2.0,0,2.0,3,The answer does not address any valid reason for or against the development.
+1ai,12,1.5,2,0.5,3,"The student provided a clear argument against the upgrade, highlighting security concerns and access difficulties. Howev"
+1ai,13,1.5,1,0.5,3,"Good start, but lacking arguments and details regarding biometrics."
+1ai,14,2.5,1,1.5,3,The student has shown partial awareness of the cost advantage of biometrics in the absence of human security after worki
+1ai,15,2.5,0,2.5,3,Answer does not provide a valid reason related to the rubric criteria for or against the development. It also contains a
+1ai,16,2.0,0,2.0,3,No valid argument is provided to support or counter the development.
+1ai,17,3.0,2,1.0,3,Some points addressed but not fully or correctly. Consider more specific details when referring to success of similar te
+1ai,18,2.0,0,2.0,3,"The answer does not address the rubric criteria for arguing for or against the development, especially in relation to ac"
+1ai,19,2.5,2,0.5,3,"Mostly addressed the rubric, but incomplete statement about FRR and FAR."
+1ai,20,2.0,2,0.0,3,"The answer successfully argues against the development, but does not explicitly mention 'criminals by-passing the biomet"
+1ai,21,1.5,0,1.5,3,"The student partially addresses one rubric criterion, with some inaccuracies."
+1ai,22,2.5,0,2.5,3,No valid arguments were provided for or against the development.
+1ai,23,3.0,2,1.0,3,"Good attempt, but did not fully address the second point in 'Arguments against' criterion."
+1ai,24,2.5,0,2.5,3,The answer does not address any valid point regarding arguments for or against the development.
+1ai,25,3.0,0,3.0,3,The student's answer does not address any valid reason mentioned in the rubric for either arguing for or arguing against

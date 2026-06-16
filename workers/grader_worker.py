@@ -54,9 +54,13 @@ def _build_written_prompt(student_answer: str, answer_key_entry: dict) -> str:
         f"Reference answer: {answer_key_entry['answer']}\n"
         f"Rubric: {answer_key_entry['rubric']}\n"
         f"Total marks: {answer_key_entry['marks']}\n\n"
-        "Award marks according to the rubric for each concept that is correctly explained.\n"
-        "Deduct marks for incorrect or contradictory statements, even if the required\n"
-        "concepts are also present elsewhere in the answer.\n\n"
+        "Grading rules:\n"
+        "1. Award marks ONLY for points that explicitly match the rubric criteria above.\n"
+        "   Do NOT award marks for general knowledge, plausible reasoning, or points not\n"
+        "   mentioned in the rubric — even if they are technically correct.\n"
+        "2. Award proportional marks when the student partially addresses a rubric criterion.\n"
+        "3. Deduct marks for incorrect or contradictory statements.\n"
+        "4. If the answer does not address any rubric criterion, the score must be 0.\n\n"
         f"Student's answer: {student_answer}\n"
     )
     return body + "\n" + _GRADING_JSON_SCHEMA
