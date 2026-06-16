@@ -2,7 +2,7 @@ import fitz  # PyMuPDF
 
 _GREEN  = (0.0, 0.7, 0.0)
 _RED    = (1.0, 0.0, 0.0)
-_ORANGE = (1.0, 0.5, 0.0)
+_ORANGE = (0.80, 0.33, 0.0)
 _YELLOW = (1.0, 0.9, 0.0)
 _WHITE  = (1.0, 1.0, 1.0)
 _BLACK  = (0.0, 0.0, 0.0)
@@ -67,30 +67,6 @@ def _draw_tick_or_cross(page: fitz.Page, x: float, y: float, score: int, max_sco
         # Orange question mark for partial credit
         page.insert_text(fitz.Point(x, y + 14), "?", fontsize=14, color=_ORANGE)
 
-
-def _draw_reliability_stamp(page: fitz.Page, reliability_info: dict) -> None:
-    score = reliability_info["score"]
-    level = reliability_info["level"].upper()
-    color = _RELIABILITY_COLORS.get(reliability_info["level"], _GRAY)
-    descriptions = {
-        "HIGH":   "Word-level annotations are accurate.",
-        "MEDIUM": "Word-level annotations are mostly accurate.",
-        "LOW":    "Handwriting was difficult to process — annotations may be approximate.",
-    }
-    page_width = page.rect.width
-    box = fitz.Rect(page_width - 215, 10, page_width - 10, 54)
-    page.draw_rect(box, color=color, fill=color, fill_opacity=0.10)
-    page.draw_rect(box, color=color, width=1)
-    page.insert_text(
-        fitz.Point(page_width - 210, 26),
-        f"Handwriting Reliability: {score:.0f}% — {level}",
-        fontsize=8, color=color,
-    )
-    page.insert_text(
-        fitz.Point(page_width - 210, 40),
-        descriptions.get(level, ""),
-        fontsize=7, color=color,
-    )
 
 
 def _letter_grade(pct: float) -> str:
@@ -158,9 +134,6 @@ def annotate_pdf(
     dpi: int = 300,
 ) -> str:
     doc = fitz.open(original_pdf_path)
-
-    if reliability_info:
-        _draw_reliability_stamp(doc[0], reliability_info)
 
     for q in questions:
         page = doc[q["page_index"]]

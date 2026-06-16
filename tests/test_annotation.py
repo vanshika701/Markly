@@ -4,7 +4,7 @@ from utils.text_utils import build_annotation_map
 from workers.annotator_worker import annotate_pdf
 
 PDF_PATH = "samples/handwritten.pdf"
-OUTPUT_PATH = "/tmp/markly_annotated_test.pdf"
+OUTPUT_PATH = "samples/annotated_test.pdf"
 
 # dpi=72 means scale factor = 1.0, so these coordinates are already in PDF points.
 # At 72 dpi, 1 unit = 1 PDF point = 1/72 inch, which places annotations at
@@ -59,7 +59,7 @@ output = annotate_pdf(PDF_PATH, OUTPUT_PATH, questions, reliability_info=reliabi
 assert os.path.exists(output)
 
 print(f"\nAnnotated PDF saved to: {output}")
-print("Open that file in Preview to verify visually.")
+print("Open with: open samples/annotated_test.pdf")
 print()
 print("Page 1 should show:")
 print("  - orange '?' left of the answer region (partial credit marker)")
