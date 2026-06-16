@@ -1,6 +1,8 @@
 import re
 import statistics
 
+from rapidfuzz import fuzz, process
+
 QUESTION_NUMBER_RE = re.compile(r"^[Qq]?(\d+)([.):]?$|[.):]\s)")
 OPTION_LABEL_RE = re.compile(r"^([A-Da-d])([.):]?$|[.):]\s)")
 
@@ -108,6 +110,58 @@ def bounding_box(lines: list[list[dict]]) -> dict:
         "right": max(w["left"] + w["width"] for w in all_words),
         "bottom": max(w["top"] + w["height"] for w in all_words),
     }
+
+
+_ANNOTATION_TYPES = {
+    "spelling_mistakes": "circle",
+    "wrong_parts": "strikethrough",
+    "correct_parts": "highlight",
+}
+
+
+def match_word_to_coordinates(
+    word: str, word_map: list[dict], threshold: int = 85
+) -> dict | None:
+    choices = [w["text"] for w in word_map]
+    match = process.extractOne(word, choices, scorer=fuzz.ratio, score_cutoff=threshold)
+    if match is None:
+        return None
+    _, _, index = match
+    w = word_map[index]
+    return {"left": w["left"], "top": w["top"], "width": w["width"], "height": w["height"]}
+
+
+def match_phrase_to_coordinates(
+    phrase: str, word_map: list[dict], threshold: int = 85
+) -> dict | None:
+    matched = [
+        match_word_to_coordinates(word, word_map, threshold)
+        for word in phrase.split()
+    ]
+    matched = [c for c in matched if c is not None]
+    if not matched:
+        return None
+    left = min(c["left"] for c in matched)
+    top = min(c["top"] for c in matched)
+    right = max(c["left"] + c["width"] for c in matched)
+    bottom = max(c["top"] + c["height"] for c in matched)
+    return {"left": left, "top": top, "width": right - left, "height": bottom - top}
+
+
+def build_annotation_map(
+    grading_result: dict, word_map: list[dict], threshold: int = 85
+) -> list[dict]:
+    items = []
+    for field, annotation_type in _ANNOTATION_TYPES.items():
+        for text in grading_result.get(field, []):
+            is_phrase = " " in text.strip()
+            coords = (
+                match_phrase_to_coordinates(text, word_map, threshold)
+                if is_phrase
+                else match_word_to_coordinates(text, word_map, threshold)
+            )
+            items.append({"text": text, "annotation_type": annotation_type, "coordinates": coords})
+    return items
 
 
 def parse_questions(words: list[dict], page_number: int | None = None, start_number: int = 1) -> list[dict]:

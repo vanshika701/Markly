@@ -1,3 +1,4 @@
+import io
 import json
 import logging
 
@@ -51,6 +52,21 @@ def _call_groq(prompt: str) -> str:
     return response.choices[0].message.content
 
 
+def _call_gemini_vision(prompt: str, image) -> str:
+    buffer = io.BytesIO()
+    image.save(buffer, format="PNG")
+    client = _get_gemini_client()
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=[
+            prompt,
+            types.Part.from_bytes(data=buffer.getvalue(), mime_type="image/png"),
+        ],
+        config=types.GenerateContentConfig(response_mime_type="application/json"),
+    )
+    return response.text
+
+
 PROVIDER_CALLERS = {
     "gemini": _call_gemini,
     "groq": _call_groq,
@@ -86,3 +102,11 @@ def grade_answer(prompt: str) -> dict:
         logger.warning("%s returned malformed JSON twice, falling back", provider_name)
 
     raise RuntimeError("All LLM providers failed")
+
+
+def grade_answer_with_image(prompt: str, image) -> dict | None:
+    try:
+        return _parse_with_retry(lambda p: _call_gemini_vision(p, image), prompt)
+    except Exception as e:
+        logger.warning("gemini vision failed (%s), falling back to text grading", e)
+        return None
