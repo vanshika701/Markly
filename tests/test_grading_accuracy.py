@@ -30,9 +30,10 @@ def load_answer_key(wb, question_numbers: list[str]) -> dict:
             key[q_num] = {
                 "number": q_num,
                 "type": "written",
-                "answer": row[6],       # QUESTION column = reference answer context
-                "rubric": row[7],       # MARK GUIDE column
-                "marks": int(row[8]),   # GUIDE SCORE column
+                "answer": row[6],
+                "rubric": row[7],
+                "marks": int(row[8]),
+                "score_step": 0.5,      # this dataset uses half-mark increments
             }
     return key
 

@@ -27,7 +27,9 @@ def _draw_annotation(page: fitz.Page, item: dict, fallback_rect: fitz.Rect, dpi:
     ann_type = item["annotation_type"]
 
     if ann_type == "highlight":
-        page.draw_rect(rect, color=None, fill=_GREEN, fill_opacity=0.35)
+        page.draw_rect(rect, color=None, fill=_GREEN, fill_opacity=0.25)
+    elif ann_type == "partial_highlight":
+        page.draw_rect(rect, color=None, fill=_YELLOW, fill_opacity=0.30)
     elif ann_type == "strikethrough":
         mid_y = (rect.y0 + rect.y1) / 2
         page.draw_line(
@@ -38,33 +40,45 @@ def _draw_annotation(page: fitz.Page, item: dict, fallback_rect: fitz.Rect, dpi:
         page.draw_oval(rect, color=_RED, width=2)
 
 
-def _draw_score_badge(page: fitz.Page, region_rect: fitz.Rect, score: int, max_score: int) -> None:
+def _draw_score_badge(page: fitz.Page, region_rect: fitz.Rect, score, max_score) -> None:
     badge_text = f"{score}/{max_score}"
+    badge_w, badge_h = 52, 20
+    # Prefer right of region; fall back to inside top-right if it would clip the page
     x0 = region_rect.x1 + 6
+    if x0 + badge_w > page.rect.width - 4:
+        x0 = region_rect.x1 - badge_w - 4
     y0 = region_rect.y0
-    badge = fitz.Rect(x0, y0, x0 + 48, y0 + 18)
-    page.draw_rect(badge, color=_RED, fill=_RED)
-    page.insert_text(fitz.Point(x0 + 4, y0 + 13), badge_text, fontsize=10, color=_WHITE)
+    badge_color = _GREEN if score == max_score else _RED if score == 0 else _ORANGE
+    badge = fitz.Rect(x0, y0, x0 + badge_w, y0 + badge_h)
+    page.draw_rect(badge, color=badge_color, fill=badge_color)
+    page.insert_text(fitz.Point(x0 + 4, y0 + 14), badge_text, fontsize=10, color=_WHITE)
 
 
-def _draw_sticky_note(page: fitz.Page, region_rect: fitz.Rect, feedback: str) -> None:
-    point = fitz.Point(region_rect.x0, region_rect.y1 + 6)
-    annot = page.add_text_annot(point, feedback)
-    annot.set_colors(stroke=_YELLOW)
-    annot.update()
+def _draw_feedback_box(page: fitz.Page, region_rect: fitz.Rect, feedback: str) -> None:
+    """Draw a visible yellow feedback box below the answer region."""
+    if not feedback:
+        return
+    box = fitz.Rect(region_rect.x0, region_rect.y1 + 3,
+                    region_rect.x1, region_rect.y1 + 36)
+    # Keep box within page
+    if box.y1 > page.rect.height - 4:
+        box = fitz.Rect(region_rect.x0, region_rect.y0 + 3,
+                        region_rect.x1, region_rect.y0 + 36)
+    page.draw_rect(box, color=(0.9, 0.8, 0.0), fill=_YELLOW, fill_opacity=0.85)
+    inner = fitz.Rect(box.x0 + 3, box.y0 + 2, box.x1 - 3, box.y1 - 2)
+    page.insert_textbox(inner, feedback, fontsize=7.5,
+                        color=_BLACK, align=fitz.TEXT_ALIGN_LEFT)
 
 
-def _draw_tick_or_cross(page: fitz.Page, x: float, y: float, score: int, max_score: int) -> None:
+def _draw_tick_or_cross(page: fitz.Page, x: float, y: float, score, max_score: int) -> None:
+    x = max(x, 4)  # clamp to page left edge
     if score == max_score:
-        # Green tick: short down-left stroke, then long up-right stroke
-        page.draw_line(fitz.Point(x, y + 7),  fitz.Point(x + 5, y + 14), color=_GREEN, width=2.5)
-        page.draw_line(fitz.Point(x + 5, y + 14), fitz.Point(x + 14, y), color=_GREEN, width=2.5)
+        page.draw_line(fitz.Point(x, y + 7),      fitz.Point(x + 5, y + 14), color=_GREEN, width=2.5)
+        page.draw_line(fitz.Point(x + 5, y + 14), fitz.Point(x + 14, y),     color=_GREEN, width=2.5)
     elif score == 0:
-        # Red cross: two diagonal strokes
         page.draw_line(fitz.Point(x, y),      fitz.Point(x + 14, y + 14), color=_RED, width=2.5)
         page.draw_line(fitz.Point(x + 14, y), fitz.Point(x, y + 14),      color=_RED, width=2.5)
     else:
-        # Orange question mark for partial credit
         page.insert_text(fitz.Point(x, y + 14), "?", fontsize=14, color=_ORANGE)
 
 
@@ -113,8 +127,9 @@ def _draw_summary_page(doc: fitz.Document, questions: list[dict], reliability_in
     for i, q in enumerate(questions, start=1):
         q_pct = (q["score"] / q["max_score"] * 100) if q["max_score"] else 0
         row_color = _GREEN if q["score"] == q["max_score"] else _RED if q["score"] == 0 else _ORANGE
+        label = q.get("label", f"Q{i}")
         row_text = (
-            f"Q{i}:  {q['score']}/{q['max_score']} ({q_pct:.0f}%)  —  {q['feedback']}"
+            f"{label}:  {q['score']}/{q['max_score']} ({q_pct:.0f}%)  —  {q['feedback']}"
         )
         page.insert_textbox(
             fitz.Rect(50, y - 2, W - 50, y + 32),
@@ -143,7 +158,7 @@ def annotate_pdf(
             _draw_annotation(page, item, region_rect, dpi)
 
         _draw_score_badge(page, region_rect, q["score"], q["max_score"])
-        _draw_sticky_note(page, region_rect, q["feedback"])
+        _draw_feedback_box(page, region_rect, q["feedback"])
         _draw_tick_or_cross(page, region_rect.x0 - 22, region_rect.y0, q["score"], q["max_score"])
 
     _draw_summary_page(doc, questions, reliability_info)

@@ -1,26 +1,353 @@
 question,student_index,human_score,markly_score,error,max_score,feedback
-1ai,1,2.5,3,0.5,3,The student successfully argues against the development by identifying a key concern explicitly listed in the rubric: th
-1ai,2,3.0,3,0.0,3,The student successfully argues against the development by highlighting that even advanced machines can be bypassed frau
-1ai,3,2.5,1,1.5,3,"The student has provided a good start, mentioning the benefit of biometric authentication in tracking access to the buil"
-1ai,4,0.0,0,0.0,3,The student's answer does not address any valid reasons for or against the development regarding access to the senate bu
-1ai,5,2.5,2,0.5,3,"Student's answer identifies valid concerns with biometrics authentication, but lacks discussion on cost advantage. Some "
-1ai,6,2.5,1,1.5,3,"The student partially addresses a valid reason for this development, citing the uniqueness of fingerprints."
-1ai,7,2.0,1,1.0,3,"Partial address of valid reason, but lacks concrete examples."
-1ai,8,3.0,3,0.0,3,Partial match.
-1ai,9,1.5,0,1.5,3,The student's answer is contradictory as 'I argue for against' does not make sense. The response partially addresses the
-1ai,10,1.5,1,0.5,3,The argument 'its safer because unauthorized user can not have access into the building after working hours' is partiall
-1ai,11,2.0,0,2.0,3,The answer does not address any valid reason for or against the development.
-1ai,12,1.5,2,0.5,3,"The student provided a clear argument against the upgrade, highlighting security concerns and access difficulties. Howev"
-1ai,13,1.5,1,0.5,3,"Good start, but lacking arguments and details regarding biometrics."
-1ai,14,2.5,1,1.5,3,The student has shown partial awareness of the cost advantage of biometrics in the absence of human security after worki
-1ai,15,2.5,0,2.5,3,Answer does not provide a valid reason related to the rubric criteria for or against the development. It also contains a
-1ai,16,2.0,0,2.0,3,No valid argument is provided to support or counter the development.
-1ai,17,3.0,2,1.0,3,Some points addressed but not fully or correctly. Consider more specific details when referring to success of similar te
-1ai,18,2.0,0,2.0,3,"The answer does not address the rubric criteria for arguing for or against the development, especially in relation to ac"
-1ai,19,2.5,2,0.5,3,"Mostly addressed the rubric, but incomplete statement about FRR and FAR."
-1ai,20,2.0,2,0.0,3,"The answer successfully argues against the development, but does not explicitly mention 'criminals by-passing the biomet"
-1ai,21,1.5,0,1.5,3,"The student partially addresses one rubric criterion, with some inaccuracies."
-1ai,22,2.5,0,2.5,3,No valid arguments were provided for or against the development.
-1ai,23,3.0,2,1.0,3,"Good attempt, but did not fully address the second point in 'Arguments against' criterion."
-1ai,24,2.5,0,2.5,3,The answer does not address any valid point regarding arguments for or against the development.
-1ai,25,3.0,0,3.0,3,The student's answer does not address any valid reason mentioned in the rubric for either arguing for or arguing against
+1ai,27,2.0,0,2.0,3,"The student does not provide a valid reason for supporting the development, but rather mentions a potential benefit of i"
+1ai,28,2.0,0,2.0,3,"The answer does not address any valid rubric criteria. It mentions a rejection rate, but that's not a valid point in thi"
+1ai,29,2.0,0,2.0,3,"Student doesn't address any valid rubric criterion, only makes a general statement."
+1ai,30,2.0,1,1.0,3,"Partial credit for addressing a rubric criterion, but incorrect reasoning"
+1aii,1,1.5,0,1.5,1,No matching rubric criteria mentioned.
+1ai,1,2.5,1,1.5,3,Argument against the development is partially mentioned but lacks clarity and coherent structure.
+1ai,2,3.0,1,2.0,3,Partially addressed 'arguments against' rubric criterion due to incorrect statement about human security's presence.
+1ai,3,2.5,2,0.5,3,The argument has a valid reason but lacks specific mention of the cost advantage and recorded successes of biometrics. A
+1ai,4,0.0,0,0.0,3,The student's answer does not address any rubric criterion regarding the cost benefit or security concerns.
+1ai,5,2.5,2,0.5,3,"The student successfully argued against the development, highlighting a valid security concern related to biometrics' FR"
+1ai,6,2.5,1,1.5,3,"Partially addressed 'Arguments for' criterion. However, incorrect and contradictory statements were made."
+1ai,7,2.0,0,2.0,3,"The answer does not address any rubric criterion except 'restriction on access of unauthorized personnel', but the stude"
+1ai,8,3.0,1,2.0,3,"One valid argument against the biometric authentication has been provided, mentioning potential false acceptance errors."
+1ai,9,1.5,1,0.5,3,"The student has made some effort to address the rubric, but partially and with some incorrect statements."
+1ai,10,1.5,0,1.5,3,The answer does not meet the rubric requirements. It does not provide a valid reason for the development and does not ad
+1ai,11,2.0,0,2.0,3,"This answer does not address any valid points mentioned in the rubric. The only consideration given is 'safety', but no "
+1ai,12,1.5,3,1.5,3,"The answer provides valid reasons against the upgrade, including security concerns and difficulties for visitors. Howeve"
+1ai,13,1.5,0,1.5,3,The answer does not match any criteria in the rubric and no marks are awarded for general knowledge.
+1ai,14,2.5,2,0.5,3,"The student partially addressed one valid reason, cost as an advantage of using biometrics, but didn't fully address it."
+1ai,15,2.5,0,2.5,3,The answer does not address any valid reason regarding access to the senate building after working hours.
+1ai,16,2.0,0,2.0,3,The arguments provided do not match the rubric criteria.
+1ai,17,3.0,0,3.0,3,"The answer does not provide a reason for or against the development, it only expresses general opinions. There are also "
+1ai,18,2.0,0,2.0,3,The student's answer does not address any valid reasons mentioned in the rubric.
+1ai,19,2.5,2,0.5,3,"You have partially addressed the rubric criteria. However, your answer needs more detail regarding imminent security con"
+1ai,20,2.0,3,1.0,3,"Good argument against the development, correctly addressing the rubric criteria."
+1ai,21,1.5,0,1.5,3,The student partially mentions benefits of biometrics but does not provide a correct argument.
+1ai,22,2.5,1,1.5,3,The answer partially addresses the rubric criteria
+1ai,23,3.0,0,3.0,3,"The student's argument does not match any of the rubric criteria, except for mentioning a potential concern of unauthori"
+1ai,24,2.5,2,0.5,3,"Good effort, but not all points are correctly addressed. Partially addressed points include the issue of criminals bypas"
+1ai,25,3.0,1,2.0,3,Student makes a valid point in favour of biometrics security regarding access to the senate building after working hours
+1ai,26,2.5,1,1.5,3,"The student provides a partially valid reason for the development, citing the uniqueness of fingerprints, which reduces "
+1aii,2,0.0,0,0.0,1,"The answer does not mention Equal Error Rate (ERR) at all, so no points can be awarded."
+1aii,3,0.0,0,0.0,1,The student's answer does not address the rubric criteria. Please try again.
+1aii,4,0.0,0,0.0,1,The answer does not address any rubric criterion.
+1aii,5,0.0,0,0.0,1,"Answer does not address the Equal Error Rate (ERR) question at all, only mentions a different concept."
+1aii,6,0.0,0,0.0,1,Did not address the Equal Error Rate (ERR) definition or any related concept.
+1aii,7,2.5,0,2.5,1,"The student's answer does not address the rubric criteria at all, so no marks can be awarded."
+1aii,8,0.0,0,0.0,1,The answer does not address the rubric criteria. It provides general information about managing employee access and secu
+1aii,9,0.0,0,0.0,1,Your answer does not address the Equal Error Rate (ERR) at all.
+1aii,10,0.0,0,0.0,1,The answer does not address any rubric criterion.
+1aiii,1,0.5,0,0.5,3,The answer is unrelated to the rubric and does not address any of the required criteria.
+1aiii,2,0.0,0,0.0,3,Student's answer is unrelated to the rubric criteria.
+1aiii,3,1.5,2,0.5,3,"Good attempt, but some minor corrections needed. You've mostly addressed the rubric."
+1aiii,4,2.0,3,1.0,3,"Student's answer matches rubric, but could be more concise. One key improvement is to explicitly cite the role of job ro"
+1aiii,5,0.0,0,0.0,3,The answer does not address the Segregation of duty principle as per the rubric.
+1aiii,6,1.0,2,1.0,3,"Partially addresses the rubric, however the importance of the principle is not stated."
+1aiii,7,2.0,1,1.0,3,Student has correctly identified the information security principle as 'Segregation of duties' but lacks specific detail
+1aiii,8,0.0,2,2.0,3,Good effort but some incorrect statements. Consider more accurate terminology and specific relevance to security.
+1aiii,9,1.0,0,1.0,3,"The answer does not match the referenced answer or address any part of the rubric. Specifically, it refers to the Need-T"
+1aiii,10,1.0,2,1.0,3,"You have correctly stated the Segregation of duties principle, but lack the specific importance related to job rotation."
+1aiii,11,0.5,0,0.5,3,Student's answer does not match any rubric criterion (Segregation of Duty).
+1aiii,12,3.0,1,2.0,3,The student identifies the correct information security principle (Segregation of Duty) but only partially addresses the
+1aiii,13,0.5,1,0.5,3,"Segregation of duties refers to the separation of tasks within an organization, this answer is partially correct but lac"
+1aiii,14,2.0,2,0.0,3,"Partially addressed the rubric, with some minor errors."
+1aiii,15,0.5,2,1.5,3,"Described segregation of duty principle, but didn't explicitly mention that job rotation ensures no deception without ri"
+1aiii,16,0.0,0,0.0,3,The answer does not explicitly mention segregation of duty or any importance related to security
+1aiii,17,2.5,2,0.5,3,"A good start with understanding segregation of duty. However, the explanation could be more concise and directly related"
+1aiii,18,0.0,2,2.0,3,You identified the correct policy but did not specifically name it. Make sure to clearly state the principle.
+1aiii,19,0.0,2,2.0,3,Answer partially matches rubric but lacks key importance of security.
+1aiii,20,0.0,3,3.0,3,Correctly identifies the information security principle as Segregation of Duty.
+1aiii,21,0.0,0,0.0,3,The student's answer does not address the rubric criteria.
+1bi,1,0.0,0,0.0,1,The answer does not follow the rubric.
+1bi,2,0.0,0,0.0,1,"Incorrect answer. Student provided 6680, but according to the rubric, the correct answer is 6,642."
+1bi,3,1.5,1,0.5,1,Correctly applied formula to calculate number of links/wires in mesh topology.
+1bi,4,1.5,0,1.5,1,"Mostly incorrect, but partially demonstrates understanding of the formula."
+1bi,5,1.5,1,0.5,1,The student's answer fully addresses the rubric criterion for calculating links in a mesh topology.
+1bi,6,0.0,0,0.0,1,No match found for the given formula in the rubric.
+1bi,7,0.5,1,0.5,1,"The student correctly matched the rubric criteria. However, it is assumed that the student obtained the answer through t"
+1bi,8,0.0,0,0.0,1,The answer does not match the rubric criteria. The student failed to demonstrate any part of the required calculation.
+1bi,9,1.5,1,0.5,1,The student correctly calculated the number of links in a mesh topology based on the provided rubric.
+1bi,10,0.0,0,0.0,1,The student failed to apply the correct formula and made a mathematical error in the process.
+1bi,11,1.5,1,0.5,1,Correctly applied formula n(n-1) to calculate links.
+1bi,12,0.5,0,0.5,1,"The student's answer only partially addresses the rubric, but it is missing the correct calculation."
+1bi,13,0.5,0,0.5,1,"The student's answer partially addresses the rubric criterion, but introduces errors which prevent full credit."
+1bi,14,1.5,1,0.5,1,The student correctly applied the given formula from the rubric to arrive at the correct answer.
+1bi,15,1.5,1,0.5,1,The student's answer correctly matches the rubric.
+1bi,16,1.5,1,0.5,1,The student correctly applied the formula mentioned in the rubric to calculate the number of links.
+1bi,17,1.5,1,0.5,1,"Correctly applied the formula to calculate the number of links, but lacks explanatory steps."
+1bi,18,0.5,0,0.5,1,The calculation is incorrect. The student has mistakenly multiplied by 81 instead of subtracting it.
+1bi,19,1.5,1,0.5,1,Correctly applied the formula to calculate the number of links.
+1bi,20,1.5,1,0.5,1,Correctly calculated links using n(n-1) method
+1bi,21,1.5,0,1.5,1,"Answer partially matches the rubric criteria. However, it's missing the formula explanation which is an essential part."
+1bi,22,1.5,1,0.5,1,The student accurately represented the given equation and its solution.
+1bi,23,0.0,0,0.0,1,The student's answer doesn't explicitly match the rubric criteria.
+1bi,24,1.5,1,0.5,1,Exactly matches the rubric.
+1bi,25,0.0,0,0.0,1,The student's answer does not address the rubric criterion. The correct formula n(n -1) is missing.
+1bi,26,1.5,1,0.5,1,Answer matches rubric perfectly.
+1bii,1,0.0,0,0.0,1,Your answer does not explicitly match the rubric criteria and lacks calculation details. Please provide the correct form
+1bii,2,1.5,1,0.5,1,Student has explicitly matched the rubric for 1 point
+1bii,3,0.0,0,0.0,1,The calculation is incorrect and the correct equation is not applied.
+1bii,4,1.5,0,1.5,1,Marks not awarded as the student's answer does not exactly match the rubric.
+1bii,5,1.5,0,1.5,1,The student's answer is unrelated to the rubric and does not address the question.
+1bii,6,0.0,0,0.0,1,Student did not follow the rubric criteria to calculate the number of links.
+1bii,7,0.5,1,0.5,1,The answer directly matches the rubric.
+1bii,8,0.0,0,0.0,1,The student does not explicitly match the rubric criteria of the problem. The reference answer is based on the rubric fo
+1bii,9,1.5,0,1.5,1,The final answer incorrectly calculated the result of 82(81).
+1bii,10,0.0,0,0.0,1,The calculation is incorrect and does not follow the provided formula.
+1bii,11,1.5,1,0.5,1,Correctly calculated the number of links using the given formula.
+1bii,12,1.0,0,1.0,1,Did not use the formula correctly.
+1bii,13,0.0,1,1.0,1,"Partially correct calculation, but incomplete and incorrect conclusion."
+1bii,14,1.5,0,1.5,1,"The main calculation is correct, but the number should be an integer."
+1bii,15,1.5,1,0.5,1,"Partial mark due to correct application of formula, but miscalculation in the end result"
+1bii,16,1.0,1,0.0,1,"Correct calculation, but lacks the explicit formula as mentioned in the rubric."
+1bii,17,1.5,0,1.5,1,"The student incorrectly deduces the number of links, the formula and the final calculation do not match the rubric as th"
+1bii,18,0.0,0,0.0,1,The student did not use the correct formula or address the correct parts of the rubric.
+1bii,19,1.5,0,1.5,1,"Mostly correct, but '÷' should be '/' and there was a small calculation error. Deducting 0.2 for minor mistakes."
+1bii,20,1.5,0,1.5,1,"Mostly correct, but minor error in explanation."
+1bii,21,1.5,0,1.5,1,Student failed to show the actual calculation process of n(n -1) /2 = 82(82-1)/2 as mentioned in the rubric.
+1bii,22,1.0,0,1.0,1,The student's answer does not match the rubric. The calculated value is incorrect.
+1bii,23,0.0,1,1.0,1,The student correctly identified the formula for the number of links.
+1bii,24,1.5,0,1.5,1,"The student partially addressed the rubric by writing the correct formula, but incorrectly simplified it."
+1bii,25,0.0,0,0.0,1,"Your answer does not match the rubric. The rubric clearly states the correct formula as n(n -1) /2, which you did not re"
+1bii,26,1.5,1,0.5,1,Marks awarded only for matching the rubric criteria.
+1biii,1,1.5,0,1.5,1,The student's answer does not explicitly address the rubric and contains incorrect statements.
+1biii,2,0.5,0,0.5,1,The answer contradicts the rubric by stating that LAN is public while the rubric indicates both are privately owned.
+1biii,3,0.5,0,0.5,1,The answer does not address any part of the rubric.
+1biii,4,0.0,0,0.0,1,The answer doesn't address the rubric correctly. It also contains an incorrect statement regarding network ownership.
+1biii,5,0.0,0,0.0,1,"Answer did not address the rubric, it's partially incorrect and also confusing, and contains contradictory statements."
+1biii,6,0.0,0,0.0,1,The answer does not correctly differentiate between a PAN and a LAN using network ownership as a feature.
+1biii,7,0.5,0,0.5,1,The answer does not address any rubric criterion.
+1biii,8,0.5,0,0.5,1,None of the student's answer matches the rubric criteria.
+1biii,9,0.5,0,0.5,1,"Partially matches the rubric, but incorrect or incomplete information presented."
+1biii,10,0.0,0,0.0,1,The student's answer does not match the rubric criteria. The rubric states that since both PAN and LAN are privately own
+1biii,11,0.5,0,0.5,1,Student's answer does not address the rubric criterion that there is no difference between LAN and PAN due to network ow
+1biii,12,0.0,0,0.0,1,Your answer completely misses the point that network ownership is the key feature for differentiating between PAN and LA
+1biii,13,0.5,0,0.5,1,"Student's answer does not address the rubric criterion, missing key words from the rubric."
+1biii,14,0.0,0,0.0,1,"The answer does not address the rubric criteria, 'Using this feature, there is no difference between the named network c"
+1biii,15,0.5,0,0.5,1,"The student's answer contradicts the rubric, as both private and local area networks are privately owned."
+1biii,16,0.5,0,0.5,1,"No marks awarded as the answer incorrectly introduces a difference in speed between PAN and LAN based on ownership, when"
+1biii,17,0.0,0,0.0,1,No marks awarded as the answer does not mention network ownership as a feature or make any mention of differentiating be
+1biii,18,0.5,0,0.5,1,"The student does not address any of the rubric criteria, specifically the comparison between PAN and LAN based on networ"
+1biii,19,0.5,0,0.5,1,Student partially addressed the rubric but did not meet the exact criteria. LAN can indeed be privately owned as stated 
+1biii,20,0.5,0,0.5,1,"The student's answer does not address the rubric, which states 'Using this feature, there is no difference between the n"
+1biii,21,0.5,0,0.5,1,"Although the answer provides some relevant information, it does not correctly address the given rubric and contains spel"
+1biii,22,0.5,0,0.5,1,There is no mention of 'privately owned' or 'network ownership' as the feature to differentiate PAN and LAN.
+1biii,23,0.5,0,0.5,1,"The answer does not explicitly match the rubric criteria. A PAN is described as being between an individual, which is pa"
+1biii,24,0.5,1,0.5,1,The student partially addresses the rubric by mentioning network ownership but the explanation is incorrect.
+1biii,25,0.5,0,0.5,1,You did not explicitly mention network ownership as the key feature to differentiate between PAN and LAN.
+1biii,26,0.5,0,0.5,1,The answer does not address the rubric criterion of there being no difference between PAN and LAN due to private ownersh
+1biii,27,0.5,0,0.5,1,The answer does not demonstrate any understanding of the rubric criteria.
+1biii,28,0.5,0,0.5,1,The answer completely disregards the network ownership aspect and introduces incorrect information about the connection 
+1biii,29,0.5,0,0.5,1,Answer does not explicitly match the rubric criteria.
+1biii,30,0.5,0,0.5,1,The answer does not match any part of the rubric. The student incorrectly defines a PAN as being private key owned and a
+1biii,31,0.5,0,0.5,1,Student does not correctly address the rubric criterion. The answer contains incorrect statements.
+1biii,32,0.0,1,1.0,1,The student correctly identified that there is no difference between PAN and LAN based on network ownership.
+1biii,33,0.5,1,0.5,1,"The student correctly uses network ownership to differentiate between PAN and LAN according to the rubric, but their ans"
+1biii,34,0.0,0,0.0,1,"The student does not address any rubric criterion. They mention server placement and geographical areas, which is not re"
+1biii,35,0.5,1,0.5,1,"The answer partially addresses the rubric, correctly stating that both PAN and LAN are privately owned."
+1ci,1,1.0,0,1.0,2,"The answer does not mention anything about increasing market share, enhancing productivity of knowledge workers or provi"
+1ci,2,1.5,0,1.5,2,"No mention of strategic feasibility, market share, competitive advantage, or productivity of knowledge workers."
+1ci,3,0.5,0,0.5,2,Answer does not address rubric criterions for increasing market share or enhancing productivity of knowledge workers.
+1ci,4,1.5,1,0.5,2,The student partially addresses the first part of the rubric (increasing market share and giving firm competitive advant
+1ci,5,1.5,1,0.5,2,"Partially addressed, but lacks clarity and precision"
+1ci,6,0.5,0,0.5,2,The answer does not address any rubric criterion.
+1ci,7,0.0,0,0.0,2,Student's answer does not address any rubric criterion.
+1ci,8,1.0,0,1.0,2,"The answer does not address the strategic feasibility aspect of increasing market share, giving the firm a competitive a"
+1ci,9,1.0,1,0.0,2,The student partially addresses the rubric criterion of 'giving the firm a competitive advantage in the marketplace'. Ho
+1ci,10,1.5,0,1.5,2,The answer does not address any of the rubric criteria. It only mentions a general analysis of the system's impact on th
+1ci,11,0.0,0,0.0,2,Does not address any of the rubric criteria.
+1ci,12,0.0,1,1.0,2,Partially addresses the strategic feasibility of increasing market share.
+1ci,13,1.5,2,0.5,2,Student's answer directly targets the key points of rubric regarding strategic feasibility and giving the company a comp
+1ci,14,2.0,1,1.0,2,"Partially addressed strategic feasibility, but incorrect terminology and unclear example. Deducted for incorrect stateme"
+1ci,15,1.5,0,1.5,2,The answer does not clearly explain how the feasibility analysis provides a competitive advantage to the organization.
+1ci,16,0.5,1,0.5,2,"The student briefly addressed the concept of using strategic analysis to drive competitive advantage, but could have pro"
+1ci,17,0.0,1,1.0,2,"Partially addressed 'give the firm a competitive advantage in the marketplace' rubric criterion, but lacks clarity and s"
+1ci,18,0.5,1,0.5,2,"Partially addressed strategic feasibility with a focus on competitive advantage; however, failed to explicitly mention m"
+1ci,19,1.0,1,0.0,2,"Partially addressed strategic feasibility by mentioning competitive advantage, but lacks clarity and precision."
+1ci,20,0.5,1,0.5,2,Partial consideration of the ability of the system to give the firm a competitive advantage in the marketplace.
+1ci,21,1.0,1,0.0,2,"Student correctly identifies strategic feasibility as the relevant analysis, but misses the opportunity to elaborate on "
+1ci,22,0.0,0,0.0,2,"The answer does not address the rubric criteria for giving the firm a competitive advantage in the marketplace, and enha"
+1ci,23,1.0,1,0.0,2,"Addressed strategic feasibility, but did not fully consider increasing market share, competitive advantage, or enhancing"
+1ci,24,0.0,0,0.0,2,The answer does not address any criteria mentioned in the rubric.
+1ci,25,1.0,0,1.0,2,Does not address any rubric criterion
+1di,1,0.5,1,0.5,2,Three out of four steps are correct but some are not exactly mentioned in the rubric. Quick prototype should be more spe
+1di,2,0.0,0,0.0,2,The student's answer does not match any of the rubric criteria.
+1di,3,0.0,1,1.0,2,"Partially addressed the question, but did not list all steps involved in using the prototyping model."
+1di,4,0.0,0,0.0,2,The answer does not explicitly mention the four steps involved in using the prototyping model in system development as p
+1di,5,0.0,0,0.0,2,Student's answer does not explicitly match any rubric criteria.
+1di,6,0.0,0,0.0,2,The answer does not mention any of the rubric criteria. It seems to describe the software development life cycle instead
+1di,7,0.0,0,0.0,2,
+1di,8,0.0,0,0.0,2,No relevant information provided in the answer.
+1di,9,1.0,1,0.0,2,The answer partially addresses the rubric. Points awarded for matching criteria: Identify the user's basic requirements 
+1di,10,0.0,0,0.0,2,The answer does not address any of the specified rubric criteria.
+1di,11,0.0,0,0.0,2,The answer does not match any of the rubric criteria.
+1di,12,0.5,1,0.5,2,"The student partially addressed the rubric criteria, but missed three of the four steps. The first step is correct, but "
+1di,13,1.0,1,0.0,2,Two steps are correctly identified but two are incorrect.
+1di,14,0.0,0,0.0,2,The answer does not correctly address the rubric criteria for the prototyping model in system development.
+1di,15,0.0,0,0.0,2,The answer does not match any of the required steps in the prototyping model as per the rubric.
+1di,16,1.0,1,0.0,2,"Student identified one correct step, but incorrectly referred to them as 'photo type' and missed the third and fourth st"
+1di,17,2.0,0,2.0,2,Partially correct but lacks clarity and adherence to the prototyping model steps. Incorrect order of steps.
+1di,18,0.0,1,1.0,2,"The answer lacks key concepts in the prototyping model such as user requirements identification, working prototype devel"
+1di,19,0.0,0,0.0,2,Student's answer does not align with the rubric and does not address the question correctly.
+1di,20,0.0,0,0.0,2,The answer is not related to the prototyping model in system development. It seems to be a class list rather than descri
+1di,21,0.0,0,0.0,2,The answer is entirely off-topic and does not address any of the steps in the prototyping model.
+1di,22,0.0,0,0.0,2,The student demonstrated one underlying concept from the rubric but failed to follow the other three steps. The provided
+1dii,1,0.0,0,0.0,1,"The correct concern of outsourcing mentioned in the rubric is loss of control over information systems, overdependence o"
+1dii,2,0.0,0,0.0,1,"Does not address the key concern of outsourcing. Focus is on the time-consuming aspect, which is not relevant to the que"
+1dii,3,1.0,0,1.0,1,The answer does not address the question at all.
+1dii,4,0.0,0,0.0,1,This answer is off-topic and does not address the key concern of outsourcing.
+1dii,5,1.0,0,1.0,1,"The student partially identifies the key concern of outsourcing related to the rubric, but the explanation is unclear an"
+1dii,6,1.0,0,1.0,1,The answer does not address the concern of outsourcing. It mentions 'leaning of company information or trade secrets' wh
+1dii,7,0.5,0,0.5,1,This answer does not address the question.
+1dii,8,0.0,0,0.0,1,"Does not address the rubric's concern about outsourcing, instead discusses potential issues with the information being o"
+1dii,9,0.0,0,0.0,1,The answer does not address the question at all. Loss of control over information systems is a key concern of outsourcin
+1dii,10,1.0,0,1.0,1,"Partially correct, but lacks depth. Suggests thinking along one of the provided rubric points, but doesn't explicitly me"
+1dii,11,0.0,0,0.0,1,Your answer does not address the key concerns of outsourcing. Consider the potential risks of loss of control or unfores
+1dii,12,0.0,0,0.0,1,Does not address key concerns of outsourcing as per the rubric.
+2a,1,2.0,2,0.0,5,"You correctly identified the concept of information processing, but failed to elaborate on the processing itself."
+2a,2,3.5,2,1.5,5,"The student partially understands the concept of information processing, but the explanation is unclear and lacks specif"
+2a,3,2.0,1,1.0,5,"The student's answer partially addresses the concept of information processing, but lacks detail and specific examples."
+2a,4,4.0,3,1.0,5,"The student has partially addressed the concept of information processing, but their description is broad and not accura"
+2a,5,2.5,0,2.5,5,"Partial credit for correct concept. However, the answer lacks detail and clarity compared to the provided rubric. Key po"
+2a,6,3.0,3,0.0,5,"Mostly addresses the concept, but lacks specificity regarding information types and systems involved. Partially correct "
+2a,7,2.5,-1,ERROR,5,ERROR: All LLM providers failed
+2a,8,4.0,2,2.0,5,"Good attempt to discuss information processing, however, it lacks a broad perspective and some details are incorrect."
+2a,9,3.0,2,1.0,5,"You demonstrated some understanding of the concept of information processing. However, your answer could be more compreh"
+2a,10,3.0,0,3.0,5,"Student has partially demonstrated the concept of information processing, but failed to accurately describe its scope, t"
+2a,11,1.0,1,0.0,5,"The student identified the core concept of information processing, but failed to elaborate on it."
+2a,12,3.5,3,0.5,5,"Student has demonstrated an understanding of the concept of information processing, but with some inaccuracies and omitt"
+2a,13,3.0,3,0.0,5,"Partial credit, good effort, but doesn't fully capture scope of information processing. Mentioned conversion of data int"
+2a,14,3.5,3,0.5,5,"Student demonstrates partial understanding of information processing concept, but lacks specific examples and clarity, a"
+2a,15,2.0,1,1.0,5,Student demonstrated some understanding of information processing but lacks specific details mentioned in the rubric.
+2a,16,1.5,1,0.5,5,The answer partially correct but lacked detailed examples. It's a good start but needs more elaboration.
+2a,17,3.0,3,0.0,5,"You have correctly identified information processing as the manipulation of digitized information using digital devices,"
+2a,18,1.0,0,1.0,5,Student's answer is unrelated to the concept of information processing.
+2a,19,3.0,3,0.0,5,Your answer demonstrates understanding of the concept of information processing and its relevance to making sense of dat
+2a,20,4.0,2,2.0,5,"You demonstrated some understanding of information processing, but your explanation could be more comprehensive. You cor"
+2a,21,5.0,3,2.0,5,The student demonstrates understanding of the concept of information processing and partially addresses the rubric. Howe
+2a,22,3.0,3,0.0,5,"Student partially captures the essence of information processing, but some parts are missing or worded differently."
+2a,23,3.0,2,1.0,5,Student demonstrated the concept of information processing but lacks details and precision. They touched on software and
+2a,24,3.0,2,1.0,5,"The student partially demonstrates the concept of information processing and its benefits. However, the explanation is i"
+2a,25,3.0,2,1.0,5,"Student partially understands the concept of information processing. Uses some relevant terms like hardware, software, a"
+2a,26,4.0,2,2.0,5,"Your answer demonstrates a good understanding of the concept of information processing, but needs improvement in explain"
+2a,27,2.0,1,1.0,5,"Partially correct. Identified information processing as refining raw data, but missed the digital electronic aspect and "
+2a,28,1.5,0,1.5,5,The answer fails to demonstrate any part of the information processing concept. It does not match the rubric and does no
+2a,29,2.0,1,1.0,5,"Lack of clear understanding of information processing, only mentions CPU but not other aspects of information processing"
+2a,30,3.0,2,1.0,5,"Good attempt to explain information processing, but some parts are not accurate. You mentioned data manipulation, access"
+2a,31,2.0,1,1.0,5,"The student demonstrates some understanding of information processing but is missing key points. The concept of data, us"
+2a,32,3.5,1,2.5,5,"The student partially understands the concept of information processing, but fails to elaborate on the key points mentio"
+2a,33,2.0,2,0.0,5,"Student demonstrates understanding of basic concept of information processing, but lacks clarity and scope. Partially de"
+2a,34,1.0,3,2.0,5,"Partially correct answer. Demonstrates understanding of storing, retrieving, analyzing and deriving insights from inform"
+2a,35,0.5,0,0.5,5,The answer does not demonstrate any understanding of the concept of information processing. It appears to be unrelated t
+2a,36,4.0,3,1.0,5,Student's answer is mostly correct but lacks clarity and includes minor errors. They demonstrate understanding of the ma
+2a,37,3.0,-1,ERROR,5,ERROR: All LLM providers failed
+2a,38,2.0,1,1.0,5,"The student has partially addressed the question, but missed out on several key points, including the concept of IT and "
+2a,39,4.0,2,2.0,5,"The student understands the general concept of information processing, but lacks detail and clarity. Good effort, but ne"
+2a,40,1.5,0,1.5,5,The answer contradicts the rubric and is off-topic. Student has no understanding of the concept of information processin
+2a,41,4.5,2,2.5,5,"The answer shows some understanding of information processing, but lacks the core explanation of IT involvement. You dem"
+2a,42,3.0,2,1.0,5,"The student demonstrates basic understanding of information processing concepts. However, the answer lacks clarity in ex"
+2a,43,2.0,0,2.0,5,The answer does not address the question about information processing.
+2a,44,1.5,0,1.5,5,"The answer is entirely off-topic and contradicts the rubric. It lacks key concepts like information technology, processi"
+2bi,1,1.0,0,1.0,2,The answer partially addresses the question but only mentions one type of business information system. A stronger answer
+2bi,2,2.0,2,0.0,2,"Partial credit awarded for mentioning MIS, but SIS is not a business information system. Correct answer would include Ma"
+2bi,3,1.0,1,0.0,2,"Student identified Management Information Systems, but missed one more business information system."
+2bi,4,1.0,0,1.0,2,The answer is too broad and does not specifically mention any business information systems.
+2bi,5,2.0,2,0.0,2,"The student has listed two key business information systems, demonstrating a solid understanding of the rubric."
+2bi,6,1.0,1,0.0,2,"Partially correct, Transaction Processing System is a correct answer, but only one system was listed."
+2bi,7,1.0,0,1.0,2,"Only Decision Support System was listed, where two examples were required."
+2bi,8,2.0,2,0.0,2,"The student listed two systems, but could have done better by providing more information on each."
+2bi,9,0.0,0,0.0,2,"Student's answer does not match any of the rubric points. The student mentioned 'Hardware, Software' which are general t"
+2bi,10,2.0,0,2.0,2,"The answer does not address any of the Business Information Systems mentioned in the rubric, including Management inform"
+2bi,11,0.0,0,0.0,2,The answer is off-topic and does not address the question. Business Intelligence (BI) and Business Analytics (BA) are re
+2bi,12,2.0,2,0.0,2,"The student correctly identified Management Information System (MIS) and Transactional Processing System (TPS). However,"
+2bi,13,2.0,1,1.0,2,"Answer is partially correct. Identified Transaction Processing System, but Expert System is not a direct equivalent to o"
+2bi,14,2.0,1,1.0,2,"Correctly identifies Management Information System, but incorrectly suggests 'Expert Information System' instead of Deci"
+2bi,15,2.0,2,0.0,2,"Good answer, covers 2 out of 2 required options."
+2bi,16,2.0,2,0.0,2,"Management information system is correct. However, the student missed two opportunities for points by not listing a seco"
+2bi,17,0.0,2,2.0,2,"Correctly identified Management Information Systems, but did not provide clear explanation."
+2bi,18,1.5,1,0.5,2,"Some parts of the answer are correct (Decision Support Systems), but the specific systems mentioned are not entirely acc"
+2bi,19,2.0,1,1.0,2,"Good attempt, however, only two correct answers were provided."
+2bi,20,2.0,1,1.0,2,The answer is partially correct as it mentions a relevant business information system (Management Information System). H
+2bi,21,0.0,0,0.0,2,The student's answer does not demonstrate any of the concepts covered in the rubric. A strong answer would require ident
+2bi,22,0.0,0,0.0,2,The answer does not demonstrate any of the business information systems mentioned in the rubric.
+2bi,23,2.0,2,0.0,2,Strong answer that clearly addresses the question with minimal errors or contradictions.
+2bi,24,2.0,1,1.0,2,"The student partially answered the question with Management Information Systems (M.I.S), but the second part does not ma"
+2bi,25,0.0,0,0.0,2,Your answer is too general and does not match any concepts in the rubric.
+2bi,26,2.0,2,0.0,2,"Partial credit because 3 points are mentioned. However, 'Expert system' is not a business information system typically c"
+2bi,27,2.0,1,1.0,2,"The student provides 1.5 marks for Transaction Processing System, but loses 0.5 marks for mentioning an ""Expert system"" "
+2bi,28,2.0,2,0.0,2,Student's answer demonstrates two Business Information Systems from the rubric.
+2bi,29,2.0,1,1.0,2,"Student partially correctly identified Transactional Processing System (TPS), Management Information System. However, th"
+2bi,30,2.0,1,1.0,2,"Identified two business information systems but not according to the rubric. Correct identification would be MIS/ESS, MI"
+2bi,31,2.0,2,0.0,2,"Student has demonstrated two systems used in an organization, but not all were directly stated in the rubric. The 'Manag"
+2bi,32,2.0,2,0.0,2,The answer covers the relevant points from the rubric
+2bi,33,2.0,2,0.0,2,"Good effort, but the answer could be more comprehensive to show clear understanding of the concepts. You have only liste"
+2bi,34,2.0,2,0.0,2,"Student listed two Business Information Systems in an organization, but there's room for improvement in explaining the c"
+2bi,35,2.0,1,1.0,2,"Good effort but lacks clarity on specific systems. Needs to mention system names like MIS, Executive support system, etc"
+2bi,36,2.0,1,1.0,2,"The answer partially addresses the rubric, but Strategic Information Systems (SIS) is not a widely recognized term in bu"
+2bi,37,2.0,2,0.0,2,You correctly identified two business information systems. Consider expanding your list to demonstrate additional knowle
+2bi,38,2.0,2,0.0,2,"Good attempt, but there's an extra system listed."
+2bii,1,0.0,0,0.0,1,The answer is not relevant to the function of system utilities in an information system.
+2bii,2,1.0,0,1.0,1,"The student has partially addressed the main concept, but the terminology is incorrect and lacks clarity."
+2bii,3,0.5,0,0.5,1,The student's answer does not demonstrate an understanding of the function of system utilities.
+2bii,4,1.0,0,1.0,1,"The answer partially addresses the question by mentioning the role of system utilities in expanding storage space, but f"
+2bii,5,1.0,0,1.0,1,"You mentioned maintenance, but missed other functions."
+2bii,6,1.0,0,1.0,1,The answer does not accurately describe the function of system utilities. Although it mentions running periodic maintena
+2bii,7,1.0,0,1.0,1,"Student has partially addressed the function of system utilities, but lacks detail."
+2bii,8,0.0,0,0.0,1,"The student's answer does not address the question, and therefore does not meet any part of the rubric."
+2bii,9,0.0,0,0.0,1,The answer does not demonstrate any of the functions of system utilities as described in the rubric.
+2bii,10,1.0,0,1.0,1,The answer partially addresses the concept but is missing clarity on the role of system utilities in maintaining existin
+2bii,11,1.0,0,1.0,1,"Partially correct, but incomplete. You've mentioned maintenance but not explicitly expanded it to include supporting, en"
+2bii,12,1.0,0,1.0,1,"The answer partially identifies the role of system utilities, but does not fully address the entire rubric."
+2bii,13,0.5,0,0.5,1,"Partially correct. The student mentioned that utilities are used to manage computer system components, but failed to inc"
+2bii,14,0.0,0,0.0,1,The answer does not address the question at all. The student has made a general statement but it does not relate to the 
+2bii,15,1.0,0,1.0,1,"The student partially demonstrated the correct concept, but didn't use the word 'maintain', 'support', 'enhance', 'expan"
+2bii,16,1.0,0,1.0,1,"The answer partially addresses the question, but lacks detail and only highlights one part of system utilities' function"
+2bii,17,0.5,0,0.5,1,"Partially correct. You've highlighted a key function of system utilities, but haven't fully explained their purpose."
+2bii,18,1.0,0,1.0,1,"Your answer does not address the question at all, as it only partially mentions system utilities and does not describe t"
+2bii,19,1.0,0,1.0,1,"The answer partially addresses the question, but is incorrect regarding when system utilities are used. The student also"
+2bii,20,0.0,1,1.0,1,"Student's answer partially matches the rubric, but does not fully elaborate on the functions of system utilities."
+2bii,21,1.0,0,1.0,1,"Student partially demonstrates the concept, however, misses the other points in the rubric."
+2bii,22,1.0,0,1.0,1,"Correctly identified that system utilities maintain and clean the system, but lacks clarity and detail."
+2bii,23,1.0,0,1.0,1,The answer does not demonstrate the function of system utilities to an information system as per the rubric.
+2bii,24,1.0,0,1.0,1,"The student partially captured the concept of maintaining an existing program, but failed to include supporting, enhanci"
+2bii,25,1.0,0,1.0,1,"The student's answer partially addresses the question, but does not fully capture the maintenance, support, and expansio"
+2bii,26,0.0,0,0.0,1,The answer does not address the main concept of system utilities to an information system.
+2bii,27,0.5,0,0.5,1,The student's answer does not demonstrate an understanding of the function of system utilities as described in the rubri
+2bii,28,0.0,0,0.0,1,The answer does not demonstrate any understanding of the function of system utilities. It is completely off-topic.
+2bii,29,0.0,0,0.0,1,No correct concepts or ideas presented to award any marks.
+2c,1,2.0,2,0.0,3,"You provided most of the correct examples, however, Mac OS is an operating system, but it is a part of the macOS range w"
+2c,2,3.0,2,1.0,3,"Partially correct. Mentioned IOS and Android, but missed a more specific Linux distribution (Ubuntue / Fedora) or anothe"
+2c,3,1.5,0,1.5,3,The answer provided does not list three operating systems as required. It only mentions two operating system types - Tim
+2c,4,1.0,0,1.0,3,"Your answer does not match the rubric provided. PASCAL and COBOL are programming languages, but they are not operating s"
+2c,5,1.0,0,1.0,3,"Answer only listed a single example, whereas three were required. The answer also lacks specificity, as it could be any "
+2c,6,1.0,1,0.0,3,"A good attempt, but a more comprehensive answer would include at least two more examples from the rubric."
+2c,7,1.0,1,0.0,3,Student has demonstrated one example of an operating system that supports a basic information system capability.
+2c,8,3.0,0,3.0,3,The student showed some knowledge but had some crucial errors.
+2c,9,1.0,1,0.0,3,"The answer is incomplete. While Windows is an operating system that supports a basic information system capability, it d"
+2c,10,1.0,0,1.0,3,There is no clear mention of any operating system that supports a basic information system capability. The answer is too
+2c,11,1.0,0,1.0,3,"The answer does not match the rubric, as it only mentions one operating system (Mac OS) whereas the rubric requires thre"
+2c,12,2.0,2,0.0,3,"The answer is partially correct, as it mentions two operating systems that support basic information system capabilities"
+2c,13,1.0,0,1.0,3,The answer does not address the question at all.
+2c,14,1.0,0,1.0,3,The student's answer is off-topic and does not demonstrate any understanding of operating systems that support a basic i
+2c,15,1.0,0,1.0,3,Does not address the question; no relation to the given rubric points.
+2c,16,2.0,0,2.0,3,"The answer does not address the question at all, which is asking for examples of operating systems that can support a ba"
+2c,17,3.0,0,3.0,3,"The student demonstrates a partial understanding of the concept of information system capabilities, but fails to provide"
+2c,18,2.0,0,2.0,3,The answer does not address the question at all. It discusses the importance of accurate and accessible information but 
+2c,19,1.0,0,1.0,3,"The answer does not address the question at all. Instead, it discusses the importance of timely information access."
+2c,20,2.0,0,2.0,3,The answer does not match the required format of the question. The student provides an answer that addresses related but
+2c,21,3.0,0,3.0,3,"This answer does not address the question. The question is asking for operating systems, but the student discusses relia"
+2c,22,3.0,0,3.0,3,The student's answer fails to address the question and does not match any part of the rubric. Windows XP and 10 are the 
+2c,23,1.0,0,1.0,3,The answer is too brief and lacks specificity. A more detailed response would improve the score.
+2c,24,1.0,0,1.0,3,The answer does not address the question at all. It should list examples of operating systems.
+2c,25,3.0,2,1.0,3,"Good effort, but incorrect Unix reference. Note: Unix is a system that Linux and macOS are built on, however the answer "
+2c,26,3.0,0,3.0,3,"The answer does not match any operating systems from the rubric. Consider Windows, Macintosh, Ubuntu, Fedora, and other "
+2c,27,3.0,3,0.0,3,Student has provided examples directly related to the operating systems listed in the rubric.
+2c,28,0.0,0,0.0,3,The answer is entirely off-topic and contradicts the rubric.
+2c,29,0.0,1,1.0,3,"Partially correct, but includes incorrect OS (BASIC). Consider mentioning specific examples from the rubric."
+2c,30,3.0,2,1.0,3,"Student partially answers the question accurately, but could provide more specific examples to meet the full mark."
+2c,31,3.0,1,2.0,3,While the student has shown some understanding of operating systems related to Linux and Unix (which is a Unix-like oper
+2c,32,3.0,1,2.0,3,"Most of your examples are correct, however, Unix does not directly map to OS mentioned in the rubric."
+2c,33,3.0,2,1.0,3,"Mostly correct, but note that Unix is an older OS and the question seems to be asking for more up-to-date options."
+2c,34,3.0,3,0.0,3,"Excellent examples of operating systems that support a basic information system capability have been listed. However, it"

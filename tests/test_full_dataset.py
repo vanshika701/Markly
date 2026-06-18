@@ -42,6 +42,7 @@ def load_answer_key(wb) -> dict:
                 "answer": str(question) if question else "",
                 "rubric": str(mark_guide),
                 "marks": int(max_score),
+                "score_step": 0.5,      # this dataset uses half-mark increments
             }
     return key
 
