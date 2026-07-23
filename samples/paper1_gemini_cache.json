@@ -1,0 +1,282 @@
+{
+  "questions": [
+    {
+      "label": "1(a)",
+      "page_index": 0,
+      "region_top_fraction": 0.08,
+      "region_bottom_fraction": 0.23,
+      "score": 1,
+      "max_score": 1,
+      "feedback": "Correct method and accurate calculation for the geometric probability P(X=7).",
+      "correct_parts": [
+        "(5/6)^6 \u00d7 1/6",
+        "0.0558"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "1(b)",
+      "page_index": 0,
+      "region_top_fraction": 0.28,
+      "region_bottom_fraction": 0.64,
+      "score": 0,
+      "max_score": 2,
+      "feedback": "The interpretation of P(3 < X < 5) as P(X<=5) - P(X<=3) is incorrect for discrete X, it should be P(X=4). Furthermore, the calculation for P(X<=3) is incorrect (appears to be P(X<=2)).",
+      "correct_parts": [
+        "P(X <= 5) = 1 - (5/6)^5",
+        "0.598 - 0.306 = 0.292 (arithmetically correct based on student's values)"
+      ],
+      "wrong_parts": [
+        "Interpretation of P(3 < X < 5)",
+        "P(X <= 3) = 0.306 (should be 0.421)"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "2(a)",
+      "page_index": 1,
+      "region_top_fraction": 0.17,
+      "region_bottom_fraction": 0.7,
+      "score": 4,
+      "max_score": 4,
+      "feedback": "All steps for calculating p, E(X), E(X^2) and Var(X) are correct and accurate.",
+      "correct_parts": [
+        "4p + 0.4 = 1 => p = 0.15",
+        "E(X) = 2.45",
+        "E(X^2) = 6.85",
+        "Var(X) = 6.85 - (2.45)^2 = 0.8475"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "3(b)",
+      "page_index": 2,
+      "region_top_fraction": 0.12,
+      "region_bottom_fraction": 0.4,
+      "score": 3,
+      "max_score": 3,
+      "feedback": "Correct identification of Binomial distribution parameters, correct method using P(X<8) = 1 - P(X>=8), and accurate calculation.",
+      "correct_parts": [
+        "X ~ B(10, 0.4)",
+        "1 - (P(8) + P(9) + P(10))",
+        "0.9877"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "4(a)",
+      "page_index": 3,
+      "region_top_fraction": 0.35,
+      "region_bottom_fraction": 0.4,
+      "score": 0,
+      "max_score": 2,
+      "feedback": "The student's answer (tree diagram) for this question is not provided in the submitted images.",
+      "correct_parts": [],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "4(b)",
+      "page_index": 4,
+      "region_top_fraction": 0.1,
+      "region_bottom_fraction": 0.3,
+      "score": 2,
+      "max_score": 2,
+      "feedback": "Correctly calculated probabilities for both paths (from Bag X and Bag Y) and summed them to find the total probability.",
+      "correct_parts": [
+        "1/2 x 7/15 x 6/14 = 1/10",
+        "1/2 x 9/15 x 9/15 = 9/50",
+        "1/10 + 9/50 = 7/25"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "4(c)",
+      "page_index": 4,
+      "region_top_fraction": 0.35,
+      "region_bottom_fraction": 0.95,
+      "score": 2,
+      "max_score": 4,
+      "feedback": "Correctly calculated P(X and at least one R) = 2/5. Correctly calculated P(Y and at least one R) = 8/25. However, there is an arithmetic error when summing these to get P(at least one R), leading to an incorrect denominator for the conditional probability.",
+      "correct_parts": [
+        "P(X and at least one R) = 2/5",
+        "P(Y and at least one R) = 8/25"
+      ],
+      "wrong_parts": [
+        "P(at least one red) = (8+2)/25 = 2/5 (should be 18/25)"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "5(a)",
+      "page_index": 5,
+      "region_top_fraction": 0.2,
+      "region_bottom_fraction": 0.6,
+      "score": 2,
+      "max_score": 4,
+      "feedback": "Correct stems and Swans leaves (in order). However, Pelicans leaves are not in order. The key is ambiguous and does not correctly represent the back-to-back format.",
+      "correct_parts": [
+        "Stems 15-19",
+        "Swans leaves correctly ordered"
+      ],
+      "wrong_parts": [
+        "Pelicans leaves not ordered (e.g., 15: 8,6; 16: 5,2,3)",
+        "Key is ambiguous and incorrect"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "5(b)",
+      "page_index": 6,
+      "region_top_fraction": 0.1,
+      "region_bottom_fraction": 0.25,
+      "score": 0,
+      "max_score": 3,
+      "feedback": "Incorrect median and quartiles. The method for IQR (Q3-Q1) is correct, but applied to incorrect values.",
+      "correct_parts": [
+        "IQR = Q3 - Q1 (method)"
+      ],
+      "wrong_parts": [
+        "Median = 173 (should be 174)",
+        "Q1 = 165 (should be 164)",
+        "Q3 = 184 (should be 180.5 or 180)"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "5(c)",
+      "page_index": 6,
+      "region_top_fraction": 0.3,
+      "region_bottom_fraction": 0.7,
+      "score": 2,
+      "max_score": 3,
+      "feedback": "The box plot for Swans is correctly plotted using the provided summary statistics and data min/max. The scale is appropriate. However, the Pelicans plot has errors in its median and lower quartile placement.",
+      "correct_parts": [
+        "Swans box plot (Q1, Med, Q3, Min, Max)",
+        "Appropriate scale and labels"
+      ],
+      "wrong_parts": [
+        "Pelicans median (173 instead of 174)",
+        "Pelicans Q1 (163 instead of 164)"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "5(d)",
+      "page_index": 6,
+      "region_top_fraction": 0.75,
+      "region_bottom_fraction": 0.85,
+      "score": 0,
+      "max_score": 1,
+      "feedback": "The comparison regarding 'more distributed' (meaning wider spread) is incorrect, as the Swans have a slightly smaller IQR (16) compared to Pelicans (17).",
+      "correct_parts": [],
+      "wrong_parts": [
+        "'Swans players are more distributed' (incorrect conclusion)"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "6(a)",
+      "page_index": 7,
+      "region_top_fraction": 0.15,
+      "region_bottom_fraction": 0.7,
+      "score": 3,
+      "max_score": 4,
+      "feedback": "Correctly identified all valid combinations of sprinters, hurdlers, and throwers satisfying the conditions. Individual combination calculations (C(n,k)) are correct. However, there is an arithmetic error in the final sum.",
+      "correct_parts": [
+        "Identification of cases (S,H,T combinations)",
+        "Individual C(n,k) calculations (e.g., 6720, 4200, 672, 700, 280, 28)"
+      ],
+      "wrong_parts": [
+        "Final sum (11872 instead of 12600)"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "6(b)",
+      "page_index": 8,
+      "region_top_fraction": 0.15,
+      "region_bottom_fraction": 0.45,
+      "score": 3,
+      "max_score": 3,
+      "feedback": "Correctly calculated total arrangements and arrangements where hurdlers are together, then subtracted to find the required probability.",
+      "correct_parts": [
+        "8! = 40320",
+        "6! \u00d7 3! = 4320",
+        "40320 - 4320 = 36000"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "6(c)",
+      "page_index": 8,
+      "region_top_fraction": 0.5,
+      "region_bottom_fraction": 0.7,
+      "score": 0,
+      "max_score": 3,
+      "feedback": "The method '6! x 5 x 3' is incorrect for this type of problem, and the resulting calculation is also incorrect (1080.0 instead of 10800 if 6! * 5 * 3 was intended).",
+      "correct_parts": [],
+      "wrong_parts": [
+        "Incorrect method '6! x 5 x 3'",
+        "Incorrect calculation leading to 1080.0"
+      ],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "7(a)",
+      "page_index": 9,
+      "region_top_fraction": 0.15,
+      "region_bottom_fraction": 0.4,
+      "score": 3,
+      "max_score": 3,
+      "feedback": "Correctly identified the Normal distribution and its parameters. Correctly calculated the Z-score and used the Z-table for the final probability.",
+      "correct_parts": [
+        "X ~ N(46.3, 6.4^2)",
+        "Z = 1.375",
+        "1 - P(Z <= 1.375) = 0.0845"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "7(b)",
+      "page_index": 9,
+      "region_top_fraction": 0.5,
+      "region_bottom_fraction": 0.95,
+      "score": 3,
+      "max_score": 3,
+      "feedback": "Correctly set up the probability statement for the Normal distribution. Accurately used the inverse Normal function to find the Z-value and solved for sigma.",
+      "correct_parts": [
+        "X ~ N(39.8, sigma^2)",
+        "P(X > 48.6) = 0.1",
+        "Z = 1.281",
+        "sigma = 6.87"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    },
+    {
+      "label": "7(c)",
+      "page_index": 10,
+      "region_top_fraction": 0.15,
+      "region_bottom_fraction": 0.45,
+      "score": 3,
+      "max_score": 3,
+      "feedback": "Correctly identified the Binomial distribution and applied the Normal approximation with continuity correction. All calculations for mean, variance, Z-score, and final probability are accurate.",
+      "correct_parts": [
+        "Y ~ B(150, 0.1)",
+        "Normal approximation N(15, 13.5)",
+        "Continuity correction P(X <= 19.5)",
+        "Z = 1.225",
+        "P(Z <= 1.225) = 0.8897"
+      ],
+      "wrong_parts": [],
+      "spelling_mistakes": []
+    }
+  ]
+}
